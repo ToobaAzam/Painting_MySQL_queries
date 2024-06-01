@@ -65,7 +65,8 @@ WHERE
     MUSEUM_ID IS NULL;
 
 ```
-******Output*****
+*Output*
+
 TOTAL 10223 PAINTINGS ARE NOT DISPLAYED AT ANY MUSEUM
 
 2. Are there museums without any paintings?
@@ -83,7 +84,8 @@ WHERE
         FROM
             WORK);
 ```
-******Output*****
+*Output*
+
 NO SUCH MUSEUMS AVAILABLE
 
 3. How many paintings have an asking price of more than their regular price?
@@ -97,7 +99,8 @@ WHERE
     SALE_PRICE > regular_price; 
 ```
 
-******Output*****
+*Output*
+
  NO SUCH PAINTINGS AVAILABLE
 
 
@@ -109,7 +112,7 @@ FROM product_size
 WHERE SALE_PRICE < (regular_price*1/2); 
 ```
 
-******Output*****
+*Output*
 
  TOTAL 58 PAINTINGS ARE THERE WHOES ASKING PRICE IS LESS THEN 50%
 
@@ -126,7 +129,7 @@ FROM(
 		ON C.SIZE_ID = P.SIZE_ID) AS RANKED_PRICES
 WHERE PRICE_RANK = 1;
 ```
-******Output*****
+*Output*
 
 -- 4896,	48" x 96"(122 cm x 244 cm),	1115
 
