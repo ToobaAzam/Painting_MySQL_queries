@@ -303,6 +303,7 @@ Duplicates deleted from work, product_size, subject and image_link tables
 ```
 
 18. Display the country and the city with most no of museums. Output 2 seperate columns to mention the city and country. If there are multiple value, seperate them with comma.
+
 ```sql
 	with cte_country as 
 			(select country, count(1)
@@ -319,7 +320,7 @@ Duplicates deleted from work, product_size, subject and image_link tables
 	cross join cte_city city
 	where country.rnk = 1
 	and city.rnk = 1;
-```sql
+```
 
 19. Identify the artist and the museum where the most expensive and least expensive painting is placed. 
 Display the artist name, sale_price, painting name, museum name, museum city and canvas label
@@ -353,7 +354,7 @@ Display the artist name, sale_price, painting name, museum name, museum city and
 	select country, no_of_Paintings
 	from cte 
 	where rnk=5;
-```sql
+```
 
 21. Which are the 3 most popular and 3 least popular painting styles?
 ```sql
